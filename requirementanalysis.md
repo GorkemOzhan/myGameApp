@@ -20,7 +20,7 @@
 
 ## 1. Project Statement
 
-BuildShare is a mobile-first gaming platform developed using React Native (via Expo) where users can share detailed builds for specific games and characters, participate in game-specific forums, and interact with others through likes, comments, follows, and favorites. The backend is powered by Firebase Firestore and authentication is handled through Clerk with Google login. The platform aims to provide a centralized hub where players can find and contribute to strategic game content. BuildShare encourages community interaction through a modern, scalable architecture supporting real-time updates and user-driven engagement features.
+BuildShare is a mobile-first gaming platform developed using React Native (via Expo) where users can share detailed builds for specific games and characters, participate in game-specific forums, and interact with others through likes, comments, follows, and favorites. The backend is powered by Firebase Firestore and authentication is handled through Clerk. The platform aims to provide a centralized hub where players can find and contribute to strategic game content. BuildShare encourages community interaction through a modern, scalable architecture supporting real-time updates and user-driven engagement features.
 
 ---
 
@@ -32,7 +32,7 @@ BuildShare is a mobile-first gaming platform developed using React Native (via E
    - Strategy-focused gamers interested in community insights, gameplay efficiency, and discussion.
 
 2. **Developer and Moderator**
-   - Bekir Görkem Özhan (solo developer during MVP) responsible for development and moderation.
+   - Bekir Görkem Özhan (solo developer) responsible for development and moderation.
    - Future moderators or contributors who may manage user-generated content and assist with feature suggestions.
 
 ---
@@ -54,7 +54,7 @@ BuildShare is a mobile-first gaming platform developed using React Native (via E
 
 ### 4.1 User Story
 
-> Görkem wants to try a new strategy for Troll Warlord in Dota 2. He opens BuildShare, logs in using Google, and selects Dota 2 from the games list. He browses builds and finds a popular “Berserk Attack Build”. He favorites the build, follows the user, and later decides to share his own version through the Add Build modal. As others interact with his build, he earns badges based on upvotes and participation. Görkem later revisits the build comments to refine it based on feedback.
+> Görkem wants to try a new strategy for Troll Warlord in Dota 2. He opens BuildShare, logs in, and selects Dota 2 from the games list. He browses builds and finds a popular “Berserk Attack Build”. He favorites the build, follows the user, and later decides to share his own version through the Add Build modal. As others interact with his build, he earns badges based on upvotes and participation. Görkem later revisits the build comments to refine it based on feedback.
 
 ---
 
@@ -64,7 +64,7 @@ BuildShare is a mobile-first gaming platform developed using React Native (via E
 
 1. **Authentication and Profile**
 
-   - Users can sign in using Clerk (Google login).
+   - Users can sign in using Clerk.
    - Users see only their nickname and can log out.
    - Logging out redirects to the sign-in page.
 
@@ -112,7 +112,6 @@ BuildShare is a mobile-first gaming platform developed using React Native (via E
 3. **Security and Privacy**
 
    - Only nicknames are displayed publicly (no emails).
-   - Data must be encrypted during transmission.
    - Only logged-in users can post, comment, or vote.
 
 4. **Scalability**
@@ -123,7 +122,6 @@ BuildShare is a mobile-first gaming platform developed using React Native (via E
 5. **Reliability and Error Handling**
 
    - Clear error messages must be shown for failed actions.
-   - System should attempt retries in case of intermittent issues.
 
 6. **Maintainability**
    - Codebase must use reusable components and modular design.
@@ -134,7 +132,7 @@ BuildShare is a mobile-first gaming platform developed using React Native (via E
 ## 6. Technical and Software Constraints
 
 - **Operating System**: Android, iOS
-- **Programming Languages**: JavaScript (React Native), optional Python for AI summarization
+- **Programming Languages**: TypeScript (React Native), optional Python for AI summarization
 - **Frameworks & Libraries**:
   - **Frontend**: Expo + React Native
   - **Backend**: Firebase Firestore (NoSQL), Clerk Auth
@@ -164,6 +162,5 @@ BuildShare is a mobile-first gaming platform developed using React Native (via E
 
 4. **Stability & Security**
    - No crashes or unauthorized access should occur.
-   - Public data display must comply with privacy policies.
 
 ---
